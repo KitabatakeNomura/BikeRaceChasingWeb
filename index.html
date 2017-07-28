@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BY BIKE</title>
+    <style type="text/css">
+      #map {
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.12/gmaps.min.js"></script>
+    <script>
+      window.onload = function(){
+        var map = new GMaps(
+          {
+            div: "#map",
+            lat: 35.714296,
+            lng: 139.761919,
+            zoom: 14
+          }
+        );
+
+        map.addMarker(
+          {
+            lat: 35.712640,
+            lng: 139.762016,
+            title: "kitabang",
+            icon: "kitabang.jpg"
+          }
+        );
+      }
+    </script>
+  </body>
+</html>
