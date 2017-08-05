@@ -1,5 +1,3 @@
-var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('./db/trace.sqlite3');
 
 $(function(){
 
@@ -12,15 +10,6 @@ $(function(){
 		}
 	);
 
-	db.serialize(function(){
-		db.each("SELECT * FROM trace", function(err, row){
-			if(err) throw err;
-			else console.log(row);
-		});
-	});
-
-	db.close()
-
 	map.addMarker(
 		{
 			time: 8888888,
@@ -30,4 +19,8 @@ $(function(){
 			icon: "tktbtk.jpg"
 		}
 	);
+
+	$.getJSON("data.json", function(data){
+		console.log("JSON Data: "+ data[0].name);
+	});
 });
