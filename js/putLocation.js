@@ -22,7 +22,7 @@ $(function(){
 						lat: parseFloat(rider.lat),
 						lng: parseFloat(rider.lng),
 						title: rider.name,
-						icon: "/icons/tktbtk.jpg"
+						icon: "tktbtk.jpg"
 					}
 				);
 			}
